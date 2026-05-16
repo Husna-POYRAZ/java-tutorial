@@ -1,7 +1,6 @@
 package com.hpoyraz;
 
 import com.hpoyraz.model.Employee;
-import com.hpoyraz.model.Product;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
