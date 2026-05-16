@@ -8,17 +8,17 @@ import static com.hpoyraz.Main.products;
 
 public class Chapter1 {
 
-    static void question1 () {
+    static List<String> question1 () {
         List<String> names = List.of("Ali", "Ayşe", "Mehmet", "Ahmet", "Hüsna <3");
 
-        List<String> result = names.stream()
+        return names.stream()
                 .filter(name -> name.startsWith("A"))
                 .toList();
     }
 
-    static void question2 () {
+    static List<String> question2 () {
         List<String> names = List.of("ali", "ayşe", "mehmet");
-        List<String> upper = names.stream()
+        return names.stream()
                 .map(String::toUpperCase)
                 .toList();
     }
@@ -55,6 +55,10 @@ public class Chapter1 {
     }
 
     public static void main(String[] args) {
+        System.out.println(question1());
+        System.out.println(question2());
+        System.out.println(question3());
+        System.out.println(question4());
         System.out.println(question5());
     }
 }

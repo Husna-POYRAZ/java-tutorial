@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/stream-api.iml" filepath="$PROJECT_DIR$/.idea/stream-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stream-api-tutorial.iml" filepath="$PROJECT_DIR$/stream-api-tutorial.iml" />
     </modules>
   </component>
 </project>
