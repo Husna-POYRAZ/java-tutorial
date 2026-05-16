@@ -1,0 +1,68 @@
+package com.hpoyraz;
+
+import com.hpoyraz.model.Product;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class Chapter1 {
+
+    static final List<Product> products = List.of(
+            new Product("Laptop", "Electronics", 15000.0, 5),
+            new Product("Mouse",  "Electronics",   250.0, 50),
+            new Product("Desk",   "Furniture",    3000.0, 10),
+            new Product("Chair",  "Furniture",    1500.0, 20)
+    );
+
+
+    static void question1 () {
+        List<String> names = List.of("Ali", "Ayşe", "Mehmet", "Ahmet", "Hüsna <3");
+
+        List<String> result = names.stream()
+                .filter(name -> name.startsWith("A"))
+                .toList();
+    }
+
+    static void question2 () {
+        List<String> names = List.of("ali", "ayşe", "mehmet");
+        List<String> upper = names.stream()
+                .map(String::toUpperCase)
+                .toList();
+    }
+
+    static int question3() {
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        int sum = numbers.stream()
+                .filter(number -> number % 2 == 0)
+                .mapToInt(Integer::intValue)
+                .sum();
+
+        int sum2 = numbers.stream()
+                .filter(number -> number % 2 == 0)
+                .reduce(0, Integer::sum);
+
+        return sum;
+    }
+
+    static List<String> question4() {
+        return products.stream()
+                        .sorted(Comparator.comparingDouble(Product::price))
+                                .map(Product::name)
+                                        .toList();
+
+    }
+
+    static String question5() {
+        return products.stream()
+                .filter(product -> product.price() > 1000)
+                .findFirst()
+                .map(Product::name)
+                .orElseGet(() -> "Product not found");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(question5());
+    }
+}
