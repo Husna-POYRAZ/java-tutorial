@@ -3,18 +3,10 @@ package com.hpoyraz;
 import com.hpoyraz.model.Product;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+
+import static com.hpoyraz.Main.products;
 
 public class Chapter1 {
-
-    static final List<Product> products = List.of(
-            new Product("Laptop", "Electronics", 15000.0, 5),
-            new Product("Mouse",  "Electronics",   250.0, 50),
-            new Product("Desk",   "Furniture",    3000.0, 10),
-            new Product("Chair",  "Furniture",    1500.0, 20)
-    );
-
 
     static void question1 () {
         List<String> names = List.of("Ali", "Ayşe", "Mehmet", "Ahmet", "Hüsna <3");

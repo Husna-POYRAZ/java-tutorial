@@ -1,5 +1,7 @@
 package com.hpoyraz;
 
+import com.hpoyraz.model.Order;
+import com.hpoyraz.model.Product;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,6 +9,20 @@ import java.util.stream.Collectors;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    static final List<Product> products = List.of(
+            new Product("Laptop", "Electronics", 15000.0, 5),
+            new Product("Mouse",  "Electronics",   250.0, 50),
+            new Product("Desk",   "Furniture",    3000.0, 10),
+            new Product("Chair",  "Furniture",    1500.0, 20)
+    );
+
+    static final List<Order> orders = List.of(
+            new Order(1, "Ali",   List.of(new Product("Laptop", "Electronics", 15000.0, 1),
+                    new Product("Mouse",  "Electronics",   250.0, 2)), true),
+            new Order(2, "Ayşe",  List.of(new Product("Desk",   "Furniture",   3000.0, 1)), false),
+            new Order(3, "Mehmet",List.of(new Product("Chair",  "Furniture",   1500.0, 1),
+                    new Product("Monitor","Electronics",  4500.0, 1)), true)
+    );
 
     public static void main(String[] args) {
         // Chapter 1
