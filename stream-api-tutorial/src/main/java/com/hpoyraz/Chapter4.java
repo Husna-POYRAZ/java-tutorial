@@ -46,7 +46,7 @@ public class Chapter4 {
 
     static Map<Boolean, Double> question18 () {
         return  employees.stream()
-                .collect(Collectors.partitioningBy(
+                .collect (Collectors.partitioningBy(
                         e -> e.salary() > 15000,
                         Collectors.summingDouble(Employee::salary)  // her partition için toplam
                 ));

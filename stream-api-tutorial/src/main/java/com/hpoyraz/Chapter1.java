@@ -1,12 +1,20 @@
 package com.hpoyraz;
 
 import com.hpoyraz.model.Product;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 import static com.hpoyraz.Main.products;
 
 public class Chapter1 {
+
+    static int deneme () {
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        return numbers.stream()
+                .filter(n -> n%2 == 0)
+                .reduce(0, Integer::sum);
+    }
 
     static List<String> question1 () {
         List<String> names = List.of("Ali", "Ayşe", "Mehmet", "Ahmet", "Hüsna <3");
